@@ -6,25 +6,12 @@ import { useState } from "react";
 
 const Main=()=>{
     const [pokeData,setPokeData]=useState([]);
-    const [loading,setLoading]=useState(true);
+
     const [url,setUrl]=useState("https://pokeapi.co/api/v2/pokemon/")
-    const [nextUrl,setNextUrl]=useState();
-    const [prevUrl,setPrevUrl]=useState();
-    const [pokeDex,setPokedex]=useState();
+
    
 
     
-    const getPokemon=async(res)=>{
-       res.map(async(item)=>{
-           const result=await axios.get(item.url)
-           //console.log(result.data)
-           setPokeData(state=>{
-                state=[...state,result.data]
-                state.sort((a,b)=>a.id>b.id?1:-1)
-                return state;
-           })
-       })   
-    }
     
     return(
         <>
