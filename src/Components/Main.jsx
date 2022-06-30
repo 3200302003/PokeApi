@@ -34,9 +34,7 @@ const Main=()=>{
            })
        })   
     }
-    useEffect(()=>{
-        pokeFun();
-    },[url])
+    
     return(
         <>
             <div className="container">
